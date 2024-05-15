@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF7ADD6E2BF43DF400EEC8C0 /* EmojiCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7ADD6D2BF43DF400EEC8C0 /* EmojiCardView.swift */; };
 		EFD815AD2BEEE35F00C8ABBA /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD815AC2BEEE35F00C8ABBA /* MemoryGame.swift */; };
 		EFD815AF2BEEE37400C8ABBA /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD815AE2BEEE37400C8ABBA /* EmojiMemoryGame.swift */; };
 		EFE4080E2BEB07E200EB3A69 /* MemorizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4080D2BEB07E200EB3A69 /* MemorizeApp.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF7ADD6D2BF43DF400EEC8C0 /* EmojiCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCardView.swift; sourceTree = "<group>"; };
 		EFD815AC2BEEE35F00C8ABBA /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		EFD815AE2BEEE37400C8ABBA /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		EFE4080A2BEB07E200EB3A69 /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +59,7 @@
 			children = (
 				EFE4080D2BEB07E200EB3A69 /* MemorizeApp.swift */,
 				EFE4080F2BEB07E200EB3A69 /* EmojiMemoryGameView.swift */,
+				EF7ADD6D2BF43DF400EEC8C0 /* EmojiCardView.swift */,
 				EFD815AC2BEEE35F00C8ABBA /* MemoryGame.swift */,
 				EFD815AE2BEEE37400C8ABBA /* EmojiMemoryGame.swift */,
 				EFE408112BEB07E400EB3A69 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				EFE408102BEB07E200EB3A69 /* EmojiMemoryGameView.swift in Sources */,
 				EFE4080E2BEB07E200EB3A69 /* MemorizeApp.swift in Sources */,
 				EFD815AF2BEEE37400C8ABBA /* EmojiMemoryGame.swift in Sources */,
+				EF7ADD6E2BF43DF400EEC8C0 /* EmojiCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,8 @@ struct EmojiCardView: View {
                     .font(.system(size: 200))
                     .minimumScaleFactor(0.01)
                     .aspectRatio(1, contentMode: .fit)
+                    .rotationEffect(.degrees(card.isMatched ? 360 : 0))
+                    .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/(duration: 1).repeatForever(autoreverses: false), value: card.isMatched)
                 
             }
             .font(.largeTitle)
@@ -31,6 +33,7 @@ struct EmojiCardView: View {
             base.fill().opacity(card.isFaceUp ? 0 : 1)
         }
         .opacity(card.isMatched ? 0 : 1 )
+        .rotation3DEffect(.degrees(card.isFaceUp ? 0 : 180),axis: /*@START_MENU_TOKEN@*/(x: 0.0, y: 1.0, z: 0.0)/*@END_MENU_TOKEN@*/)
     }
     
     

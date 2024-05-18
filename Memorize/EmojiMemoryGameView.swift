@@ -7,14 +7,20 @@ struct EmojiMemoryGameView: View {
         VStack {
             ScrollView {
                 cards
-                    .animation(.default, value: viewModel.cards)
-                Button("Shuffle") {
-                    viewModel.shuffle()
+                HStack {
+                    Text("Score: \(viewModel.score())")
+                    Spacer()
+                    Button("Shuffle") {
+                        withAnimation(.easeInOut(duration: 1)){
+                            viewModel.shuffle()
+                        }
+                    }
+                    .padding(.all)
+                    .background(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
                 }
-                .padding(.all)
-                .background(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                .foregroundColor(.white)
-                .cornerRadius(8)
+                .font(.largeTitle)
             }
         }.padding()
     }
@@ -26,7 +32,9 @@ struct EmojiMemoryGameView: View {
                     .aspectRatio(2/3, contentMode: .fit)
                     .padding(4)
                     .onTapGesture {
-                        viewModel.choose(card)
+                        withAnimation(.easeInOut) {
+                            viewModel.choose(card)                            
+                        }
                     }
             }
         }

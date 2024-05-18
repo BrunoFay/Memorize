@@ -9,6 +9,7 @@ import Foundation
 
 struct MemoryGame<CarContent> where CarContent: Equatable {
     private(set) var cards: [Card]
+    private(set) var score: Int = 0
     
     init(numberOfPairOfCards: Int, cardContentFactory: (Int) -> CarContent) {
         cards = []
@@ -31,6 +32,10 @@ struct MemoryGame<CarContent> where CarContent: Equatable {
                     if cards[chosenIndex].content == cards[potentialMatchIndex].content {
                         cards[chosenIndex].isMatched = true
                         cards[potentialMatchIndex].isMatched = true
+                        updateScore(with: 2)
+                    }
+                    else {
+                        updateScore(with: -1)
                     }
                 } else {
                     indexOfTheOneAndOnlyFaceUpCard = chosenIndex
@@ -42,6 +47,10 @@ struct MemoryGame<CarContent> where CarContent: Equatable {
     
     mutating func shuffle() {
         cards.shuffle()
+    }
+    
+    mutating func updateScore(with value: Int) {
+        score += value
     }
     
     struct Card: Equatable, Identifiable {
